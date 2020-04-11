@@ -37,8 +37,8 @@ findQuestion.addEventListener('click', e => {
 checkCorrectness.addEventListener('click', e => {
     e.preventDefault();
     document.getElementsByTagName("tbody")[0].childNodes.forEach(c => {
-        if (c.childNodes[3].childNodes[0].value === c.childNodes[5].childNodes[0].value) {
-            c.childNodes[4].childNodes[0].value = 'Correct';
+        if (c.childNodes[3].childNodes[0].value === c.childNodes[5].innerHTML) {
+            c.childNodes[4].innerHTML = 'Correct';
         } else {
             c.childNodes[4].innerHTML = 'Incorrect';
         }

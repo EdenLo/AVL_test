@@ -25,7 +25,7 @@ sendMailButton.addEventListener('click', e => {
 const mailConstant = {
     SECURE_TOCKEN: '027ea83f-c40f-41a0-97d2-8bde76b4f5d5',
     FROM: 'arenabanking@gmail.com',
-    TO: 'hisa905395@gmail.com'
+    TO: 'hr@avancevl.com'
 }
 
 function clearMail(e) {
