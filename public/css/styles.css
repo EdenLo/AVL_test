@@ -157,14 +157,14 @@ button {
   display: block;
 }
 
-.checkCorrectness {
-  display: none;
-}
+/*.checkCorrectness {*/
+/*  display: none;*/
+/*}*/
 
-.checkCorrectness.open {
-  display: block;
-}
+/*.checkCorrectness.open {*/
+/*  display: block;*/
+/*}*/
 
-.correctAnswer {
-  display: none;
-}
+/*.correctAnswer {*/
+/*  display: none;*/
+/*}*/
