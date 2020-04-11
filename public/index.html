@@ -1,23 +1,118 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AVL Test Eden Lo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
+</head>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.14.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.14.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.14.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.14.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.14.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+<body>
+<div class="auth open">
+  <div class="modal">
+    <h2>Login</h2>
+    <button class="loginButton" type="button">Login with Google</button>
+  </div>
+</div>
 
+<div class="newQuestion">
+  <div class="modal">
+    <h2>Search new questions</h2>
+    <form>
+      <fieldset id="groupCalculator">
+        <div class="questionRadio"><input type="radio" name="calculatorRadio" value="Calculator" checked>Calculator</div>
+        <div class="questionRadio"><input type="radio" name="calculatorRadio" value="No Calculator">No Calculator</div>
+      </fieldset>
+      <fieldset id="groupAnswerType">
+        <div class="questionRadio"><input type="radio" name="answerTypeRadio" value="Multiple Choice" checked>Multiple Choice</div>
+        <div class="questionRadio"><input type="radio" name="answerTypeRadio" value="Grid-In">Grid-In</div>
+      </fieldset>
+      <fieldset id="groupProblemLength">
+        <div class="questionRadio"><input type="radio" name="problemLengthRadio" value="Long" checked>Long</div>
+        <div class="questionRadio"><input type="radio" name="problemLengthRadio" value="Short">Short</div>
+      </fieldset>
+      <fieldset id="topicsAlgebra">
+        <div class="questionRadio"><input type="radio" name="topicsAlgebraRadio" value="" checked>Nil</div>
+        <div class="questionRadio"><input type="radio" name="topicsAlgebraRadio" value="Algebra">Algebra</div>
+      </fieldset>
+      <fieldset id="topicsGeometry">
+        <div class="questionRadio"><input type="radio" name="topicsGeometryRadio" value="" checked>Nil</div>
+        <div class="questionRadio"><input type="radio" name="topicsGeometryRadio" value="Geometry">Geometry</div>
+      </fieldset>
+      <fieldset id="topicsArithmetic">
+        <div class="questionRadio"><input type="radio" name="topicsArithmeticRadio" value="" checked>Nil</div>
+        <div class="questionRadio"><input type="radio" name="topicsArithmeticRadio" value="Arithmetic">Arithmetic</div>
+      </fieldset>
+      <fieldset id="topicsTrignometry">
+        <div class="questionRadio"><input type="radio" name="topicsTrignometryRadio" value="" checked>Nil</div>
+        <div class="questionRadio"><input type="radio" name="topicsTrignometryRadio" value="Trignometry">Trignometry</div>
+      </fieldset>
+      <button class="findQuestion">Find</button>
+    </form>
+  </div>
+</div>
 
-  </head>
-  <body>
+<header>
+  <nav>
+    <div class="userDisplayName"></div>
+    <div class="navBar">
+      <a class="addQuestionLink">add question</a>
+      <a class="mailUsLink">mail us</a>
+      <a class="showQuestionLink">see questions</a>
+      <a class="signOut">sign out</a>
+    </div>
+  </nav>
+</header>
 
-  </body>
+<section class="questionSection" id="app">
+  <h1>Questions</h1><h3 class="totalQuestionNum"></h3>
+  <table class="questionTable">
+    <thead></thead>
+    <tr>
+      <th>question id</th>
+      <th>question title</th>
+      <th>question text</th>
+      <th>answer</th>
+    </tr>
+    </thead>
+    <tbody class="questionTableBody"></tbody>
+  </table>
+</section>
+
+<section class="mailSection">
+  <h1>Tell us your thought</h1>
+  <div class="mail">
+    <form>
+      <div class="form-group">
+        <label>Topic</label>
+        <input type="text" id="topic" placeholder="your topic.......">
+      </div>
+      <br />
+      <div class="form-group">
+        <label>Content</label>
+        <textarea id="content" rows="10" cols="50" placeholder="say something......."></textarea>
+      </div>
+      <button type="button" class="sendMail">Send</button>
+    </form>
+  </div>
+</section>
+
+<script defer src="/__/firebase/7.13.1/firebase-app.js"></script>
+<script defer src="/__/firebase/7.13.1/firebase-auth.js"></script>
+<script defer src="/__/firebase/7.13.1/firebase-database.js"></script>
+<script defer src="/__/firebase/7.13.1/firebase-messaging.js"></script>
+<script defer src="/__/firebase/7.13.1/firebase-storage.js"></script>
+<script defer src="/__/firebase/7.13.1/firebase-firestore.js"></script>
+<script defer src="/__/firebase/7.13.1/firebase-functions.js"></script>
+<script defer src="https://smtpjs.com/v3/smtp.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
+<script defer src="/__/firebase/init.js"></script>
+<script defer src="js/auth.js"></script>
+<script defer src="js/app.js"></script>
+<script defer src="js/mail.js"></script>
+<script defer src="js/question.js"></script>
+</body>
+
 </html>
